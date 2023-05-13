@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Botão Aleatório</title>
+    <style>
+      body{
+        background: rgb(2,0,36);
+        background: linear-gradient(90deg, rgb(207, 255, 239) 0%,
+        rgb(227, 248, 255) 35%,
+        rgb(219, 255, 238) 100%);
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(198, 100, 255);
+        width: 100vw;
+      
+        
+      }
+
+    
+
+      button {
+        width: 100px;
+        height: 30px;
+        background-color: rgb(255, 136, 255);
+        border: 0px solid rgb(255, 0, 43);
+        box-shadow: rgba(255, 0, 234, 0.61) 0px 5px 20px;
+        border-radius: 10px;
+        padding: 8px 12px;
+        font-size: 14px;
+        font-weight: bold;
+        color: white;
+        margin-right: 20px;
+        transition: 0.3s;
+      }
+      .img2{
+        width: 200px;
+        position: absolute;
+        rotate: 320deg;
+        transform:  scale(0.80);
+        animation: pulse 2s linear infinite;
+      }
+
+      .img1{
+        width: 200px;
+        position: absolute;
+        right: 2%;
+        rotate: 45deg;
+        transform: rotate(0deg) scale(0.80);
+        animation: pulse 2s linear infinite;
+      }
+
+    
+
+      #nao{
+        position: absolute;
+        top: 50%;
+        left: 55%;
+        transform: translate(-55%,-50%);
+    
+      }
+
+  
+      
+      .sim{
+        position: absolute;
+        top: 50%;
+        left: 45%;
+        transform: translate(-45%,-50%);
+
+      }
+   
+
+      button:hover{
+          width: 120px;
+          height: 35px;
+      }
+      #nao:hover{
+        background-color: red;
+        box-shadow: rgba(255, 0, 0, 0.747) 0px 5px 20px;
+        
+      }
+
+      .sim:hover{
+        background-color: rgb(247, 0, 255);
+        box-shadow: rgba(247, 0, 255, 0.747) 0px 5px 20px;
+      }
+
+    @media screen and (max-width: 1100px) {
+        h1{
+          font-size: 25px;
+        }
+        
+        #nao{
+        position: absolute;
+        top: 50%;
+        left: 60%;
+        transform: translate(-60%,-50%);
+      }
+
+      .sim{
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        transform: translate(-40%,-50%);
+
+      }
+  
+      .quer{
+        margin: 0 auto;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      h1{
+        border-bottom: 3px solid rgb(255, 165, 243);
+        color:rgb(255, 165, 243) ;
+        transition: 0.4s;
+      }
+    }
+
+   @media screen and (max-width:700px) {
+    h1{
+          font-size: 20px;
+          text-align: center;
+        }
+        
+        #nao{
+        position: absolute;
+        top: 50%;
+        left: 70%;
+        transform: translate(-70%,-50%);
+      }
+
+      .sim{
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        transform: translate(-30%,-50%);
+
+      }
+  
+      .quer{
+        margin: 0 auto;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      h1{
+        border-bottom: 3px solid rgb(255, 165, 243);
+        color:rgb(255, 165, 243) ;
+        transition: 0.4s;
+      }
+   }
+
+      .quer{
+        margin: 0 auto;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+      }
+      h1{
+        border-bottom: 3px solid rgb(255, 165, 243);
+        color:rgb(255, 165, 243) ;
+        transition: 0.4s;
+      }
+
+      h1:hover{
+        color: rgb(255, 162, 162);
+        border-bottom: 3px solid rgb(255, 105, 105);
+      }
+
+
+      @keyframes pulse{
+       0% {
+           transform: rotate(0deg) scale(0.65);
+           opacity: 1;
+       }
+       /*10% {
+           transform: rotate(-45deg) scale(1.3);
+       }
+       20% {
+           transform: rotate(-45deg) scale(0.9);
+       }
+       30% {
+           transform: rotate(-45deg) scale(1.2);
+       }
+       40% {
+           transform: rotate(-45deg) scale(0.9);
+       }*/
+       50% {
+           transform: rotate(0deg) scale(.80);
+           opacity: 1;
+       }
+       60% {
+           transform: rotate(0deg) scale(0.75);
+       }
+       70% {
+           transform: rotate(0deg) scale(0.65);
+       } 
+       100% {
+           transform: rotate(0deg) scale(0.65);
+           opacity: 1;
+       }
+    }
+    .boxRes{
+      width: 500px;
+      height: 200px;
+      background-color: rgb(255, 0, 13);
+      position: absolute;
+      top:50%;
+      left: 50%;
+      transform: translate(-50%,-50% );
+      padding: 20px;
+      z-index: 3;
+      border-radius: 20px;
+      box-shadow: rgba(255, 0, 0, 0.747) 0px 5px 20px;
+      display: none; 
+    }
+    .res{
+      color: rgb(255, 255, 255);
+      text-align: center;
+      font-size: 45px;
+    }
+
+    .heart{
+        transform: rotate(0deg) scale(0.80);
+        animation: pulse 2s linear infinite;
+        position: absolute;
+        top: -200px;
+        left: -200px;
+        width: 800px;
+        display: none;
+        transition: 0.4s;
+        
+      }
+      
+
+      #reset{
+        position: absolute;
+        top: 90%;
+        left: 90%;
+      }
+
+      
+
+
+      
+    </style>
+  </head>
+  <body>
+    <div class="quer" >
+      <!-- <div class="core"></div> -->
+     <img class="heart"  src="/quer namorar comigo/heart-gf3d8b61fe_1280.png"  />
+      <h1>QUER NAMORAR COMIGO?</h1>
+    </div>
+    <div class="boxRes">
+      <h2 class="res">Acho bom! Te amo vida!</h2>
+    </div>
+    <img class="img1" src="/quer namorar comigo/—Pngtree—heart-shaped little wings pink dialog_5466748.png" alt="">
+    <img class="img2" src="/quer namorar comigo/—Pngtree—heart-shaped little wings pink dialog_5466748.png" alt="">
+    <div class="center">
+     
+        
+        <button class="sim" onclick="aceito()">Sim!</button> 
+      
+        <button id="nao" class="nop" onclick="moverBotao()">Não!</button>
+    
+      </div>
+        <button id="reset" onclick="reset()">reset</button>
+    </div>
+    
+    
+    <script>
+      function moverBotao() {
+            var button = document.getElementById("nao");
+            //alert('cliacado')
+            var telaLargura = window.innerWidth - button.offsetWidth;
+            var telaAltura = window.innerHeight - button.offsetHeight;
+            
+            var moverX = Math.floor(Math.random() * telaLargura);
+            var moverY = Math.floor(Math.random() * telaAltura);
+            
+            button.style.left = moverX + "px";
+            button.style.top = moverY + "px";
+
+      }
+
+      function aceito(){
+        var btnSim = document.querySelector('.sim');
+        //alert("clicado");
+        var coracao = document.querySelector('.heart');
+        var res = document.querySelector('.boxRes');
+        coracao.style.display = "block";
+        res.style.display = "block";
+        
+      }
+
+      function reset(){
+        var btn_n = document.getElementById("nop");
+        var btnSim = document.querySelector('#rest');
+        //alert("clicado");
+        var coracao = document.querySelector('.heart');
+        var res = document.querySelector('.boxRes');
+        coracao.style.display = "none";
+        res.style.display = "none";
+      
+      }
+    </script>
+  </body>
+</html>
