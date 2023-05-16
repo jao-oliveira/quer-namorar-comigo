@@ -228,17 +228,17 @@
        }
     }
     .boxRes{
-      width: 500px;
-      height: 200px;
-      background-color: rgb(255, 0, 13,0);
+      width: 300px;
+      height: 150px;
+      background-color: rgb(255, 0, 13, 0.6);
       position: absolute;
       top:50%;
       left: 50%;
       transform: translate(-50%,-50% );
       padding: 20px;
       z-index: 3;
-      border-radius: 20px;
-      /*box-shadow: rgba(255, 0, 0, 0.747) 0px 5px 20px;*/
+      border-radius:50% ;
+      box-shadow: rgba(255, 0, 0, 0.747) 0px 5px 20px;
       display: none; 
     }
     .res{
@@ -303,12 +303,26 @@
       }
 
       @media screen and (max-width: 500px){
-        .heart{
-       
+        /*.heart
           top: -100px;
           left: -100px;
           width: 400px;
 
+        }*/
+      
+     .boxRes{
+        width: 300px;
+        height: 150px;
+        background-color: rgb(255, 0, 13, 0.6);
+        position: absolute;
+        top:40%;
+        left: 50%;
+        transform: translate(-50%,-40% );
+        padding: 20px;
+        z-index: 3;
+        border-radius:50% ;
+        box-shadow: rgba(255, 0, 0, 0.747) 0px 5px 20px;
+        display: none; 
         }
       
         .res{
@@ -366,8 +380,8 @@
   <body>
     <div class="quer" >
       <!-- <div class="core"></div> -->
-     <img class="heart"  src="/heart-gf3d8b61fe_1280.png"   />
-      <h1>QCuzinho hoje?</h1>
+     <!--<img class="heart"  src="/heart-gf3d8b61fe_1280.png" />-->
+      <h1>Cuzinho hoje?</h1>
     </div>
     <div class="boxRes">
       <h2 class="res">Acho bom!<br> Te amo vida!</h2>
