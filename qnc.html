@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!DOCTYPE html>
+    <html lang="Pt-Br">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+    </head>
     <title>Botão Aleatório</title>
     <style>
       body{
@@ -72,6 +80,7 @@
       button:hover{
           width: 120px;
           height: 35px;
+          
       }
       #nao:hover{
         background-color: red;
@@ -110,12 +119,15 @@
         top: 35%;
         left: 50%;
         transform: translateX(-50%);
+        z-index: 1;
       }
       h1{
         border-bottom: 3px solid rgb(255, 165, 243);
         color:rgb(255, 165, 243) ;
         transition: 0.4s;
       }
+
+      
     }
 
    @media screen and (max-width:700px) {
@@ -151,6 +163,13 @@
         color:rgb(255, 165, 243) ;
         transition: 0.4s;
       }
+      #reset{
+        position: absolute;
+        top: 90%;
+        left: 60%;
+      }
+     
+      
    }
 
       .quer{
@@ -160,6 +179,7 @@
         left: 50%;
         transform: translateX(-50%);
         z-index: 1;
+        
       }
       h1{
         border-bottom: 3px solid rgb(255, 165, 243);
@@ -171,6 +191,8 @@
         color: rgb(255, 162, 162);
         border-bottom: 3px solid rgb(255, 105, 105);
       }
+
+     
 
 
       @keyframes pulse{
@@ -208,7 +230,7 @@
     .boxRes{
       width: 500px;
       height: 200px;
-      background-color: rgb(255, 0, 13);
+      background-color: rgb(255, 0, 13,0);
       position: absolute;
       top:50%;
       left: 50%;
@@ -216,7 +238,7 @@
       padding: 20px;
       z-index: 3;
       border-radius: 20px;
-      box-shadow: rgba(255, 0, 0, 0.747) 0px 5px 20px;
+      /*box-shadow: rgba(255, 0, 0, 0.747) 0px 5px 20px;*/
       display: none; 
     }
     .res{
@@ -228,12 +250,15 @@
     .heart{
         transform: rotate(0deg) scale(0.80);
         animation: pulse 2s linear infinite;
+        width: 400px;
         position: absolute;
         top: -200px;
         left: -200px;
         width: 800px;
+        
         display: none;
         transition: 0.4s;
+        
         
       }
       
@@ -241,7 +266,95 @@
       #reset{
         position: absolute;
         top: 90%;
-        left: 90%;
+        left: 75%;
+      }
+      @media screen and (max-width: 1100px){
+        .heart{
+       
+       top: -150px;
+       left: -150px;
+       width: 600px;
+     
+       }
+
+        .res{
+        color: rgb(255, 255, 255);
+        text-align: center;
+        font-size: 22px;
+        
+      }
+      }
+
+
+      @media screen and (max-width:700px){
+        .heart{
+       
+        top: -100px;
+        left: -75px;
+        width: 400px;
+      
+      }
+
+      .res{
+      color: rgb(255, 255, 255);
+      text-align: center;
+      font-size: 22px;
+    }
+      }
+
+      @media screen and (max-width: 500px){
+        .heart{
+       
+          top: -100px;
+          left: -100px;
+          width: 400px;
+
+        }
+      
+        .res{
+        color: rgb(255, 255, 255);
+        text-align: center;
+        font-size: 22px;
+        }
+
+
+        #nao{
+        position: absolute;
+        top: 50%;
+        left: 80%;
+        transform: translate(-80%,-50%);
+      }
+
+      .sim{
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        transform: translate(-20%,-50%);
+
+      }
+      
+      #reset{
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      }
+
+      @media screen and (max-width: 370px){
+        .heart{
+       
+       top: -100px;
+       left: -120px;
+       width: 400px;
+
+     }
+   
+     .res{
+     color: rgb(255, 255, 255);
+     text-align: center;
+     font-size: 22px;
+     }
       }
 
       
@@ -253,24 +366,28 @@
   <body>
     <div class="quer" >
       <!-- <div class="core"></div> -->
-     <img class="heart"  src="/quer namorar comigo/heart-gf3d8b61fe_1280.png"  />
-      <h1>QUER NAMORAR COMIGO?</h1>
+     <img class="heart"  src="/heart-gf3d8b61fe_1280.png"   />
+      <h1>QCuzinho hoje?</h1>
     </div>
     <div class="boxRes">
-      <h2 class="res">Acho bom! Te amo vida!</h2>
+      <h2 class="res">Acho bom!<br> Te amo vida!</h2>
     </div>
-    <img class="img1" src="/quer namorar comigo/—Pngtree—heart-shaped little wings pink dialog_5466748.png" alt="">
-    <img class="img2" src="/quer namorar comigo/—Pngtree—heart-shaped little wings pink dialog_5466748.png" alt="">
+    <img class="img1" src="/—Pngtree—heart-shaped little wings pink dialog_5466748.png" alt="">
+    <img class="img2" src="/—Pngtree—heart-shaped little wings pink dialog_5466748.png" alt="">
     <div class="center">
      
         
-        <button class="sim" onclick="aceito()">Sim!</button> 
+        <a href="https://www.youtube.com/shorts/bBfTkwZA0C4"><button class="sim" onclick="aceito()">Sim!</button> </a>
       
         <button id="nao" class="nop" onclick="moverBotao()">Não!</button>
     
       </div>
-        <button id="reset" onclick="reset()">reset</button>
-    </div>
+        <button relo id="reset" onclick="reset()">reset</button>
+        
+      </div>
+
+      <h3 style="position:absolute; top: 90%; left: 50%; transform: translate(-50%,-60%); font-size: 16px; ">&copy @jp_Oliver</h3>
+   
     
     
     <script>
@@ -299,13 +416,14 @@
       }
 
       function reset(){
-        var btn_n = document.getElementById("nop");
-        var btnSim = document.querySelector('#rest');
+       // var btn_n = document.getElementById("nop");
+       /* var btnSim = document.querySelector('#rest');
         //alert("clicado");
         var coracao = document.querySelector('.heart');
         var res = document.querySelector('.boxRes');
         coracao.style.display = "none";
-        res.style.display = "none";
+        res.style.display = "none";*/
+        window.location.reload();
       
       }
     </script>
